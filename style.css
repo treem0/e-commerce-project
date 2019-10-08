@@ -40,13 +40,11 @@ nav {
 .nav {
     text-decoration: underline;
 }
-.nav:hover {
+.nav:hover{
     color: #EF8354;
 }
-table, td {
-    width: 500px;
-    border: dotted 1px blue;
-}
-td {
-    text-align: center; 
+main {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
 }
