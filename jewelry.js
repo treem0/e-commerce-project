@@ -1,7 +1,7 @@
 const turquoiseRing = {
     id: 'turquoise-ring',
     name: 'Turquoise Ring',
-    image: 'Assets\turquoisering.jpg',
+    image: 'turquoisering.jpg',
     description: 'Handmade Turquoise Ring',
     category: 'ring',
     price: 50.00
@@ -10,7 +10,7 @@ const turquoiseRing = {
 const blackTurquoiseRing = {
     id: 'black-turquoise-ring',
     name: 'Black Turquoise Ring',
-    image: 'Assets\blackturquoisering.jpg',
+    image: 'blackturquoisering.jpg',
     description: 'Handmade Black Turquoise Ring',
     category: 'ring',
     price: 50.00
@@ -19,7 +19,7 @@ const blackTurquoiseRing = {
 const turquoiseBracelet = {
     id: 'turquoise-bracelet',
     name: 'Turquoise Bracelet',
-    image: 'assets\turquoisebracelet.jpg',
+    image: 'turquoisebracelet.jpg',
     description: 'Handmade Turquoise Bracelet',
     category: 'bracelet',
     price: 45.00
@@ -28,7 +28,7 @@ const turquoiseBracelet = {
 const turquoiseNecklace = {
     id: 'turquoise-necklace',
     name: 'Turquoise Necklace',
-    image: 'Assets\turquoisenecklace.jpg',
+    image: 'turquoisenecklace.jpg',
     description: 'Handmade Turquoise Necklace',
     category: 'necklace',
     price: 45.00
