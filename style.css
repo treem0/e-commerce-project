@@ -4,20 +4,36 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: solid;
-    background-color: black;
-    color: whitesmoke;
-    width: 1000px;
+    color: #2D3142;
+    width: 1400px;
+    max-width: 1600px;
+    margin: 50px;
 }
 h1 {
     font-family: 'Krona One', sans-serif;
 }
 h2 {
     font-family: 'Sree Krushnadevaraya', serif;
-    border: solid;
     width: 50%;
     align-items: center;
-
+}
+nav {
+    display: flex;
+    border: solid;
+    flex-direction: row;
+    justify-content: space-around; 
+    width: 1000px;
+}
+.nav {
+    text-decoration: underline;
+}
+.nav:hover{
+    color: #EF8354;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
 }
 img {
     width: 150px;
@@ -28,4 +44,25 @@ ul {
     display: flex;
     justify-content: space-around;
     font-family: 'Sree Krushnadevaraya', serif;
+    list-style-type: none;
+}
+li {
+    border: solid;
+    border-radius: 20px;
+    width: 250px;
+    box-shadow: 5px 10px #2D3142;
+    align-content: center;
+}
+li:hover {
+    color: #EF8354;
+}
+button {
+    background-color: #2D3142;
+    color: #BFC0C0;
+    border: solid;
+    border-color: #2D3142;
+    margin: 5px;
+}
+button:hover {
+    color: #EF8354;
 }
