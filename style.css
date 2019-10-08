@@ -1,0 +1,22 @@
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid;
+    background-color: black;
+    color: whitesmoke;
+    width: 1000px;
+}
+h1 {
+    font-family: 'Krona One', sans-serif;
+}
+h2 {
+    font-family: 'Sree Krushnadevaraya', serif;
+}
+img {
+    width: 150px;
+    height: 150px;
+    transform: rotate(90deg);
+}
