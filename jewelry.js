@@ -34,11 +34,11 @@ const turquoiseNecklace = {
     price: 45.00
 };
 
-const jewelry = [
+const jewelries = [
     turquoiseRing,
     blackTurquoiseRing,
     turquoiseBracelet,
     turquoiseNecklace
 ];
 
-export default jewelry;
+export default jewelries;

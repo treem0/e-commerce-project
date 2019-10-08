@@ -14,9 +14,18 @@ h1 {
 }
 h2 {
     font-family: 'Sree Krushnadevaraya', serif;
+    border: solid;
+    width: 50%;
+    align-items: center;
+
 }
 img {
     width: 150px;
     height: 150px;
     transform: rotate(90deg);
+}
+ul {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Sree Krushnadevaraya', serif;
 }
