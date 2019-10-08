@@ -1,5 +1,5 @@
-import renderJewelry from './render-jewelry.js';
-import jewelries from './jewelry.js';
+import renderJewelry from '../Products/render-jewelry.js';
+import jewelries from '../jewelry.js';
 
 const list = document.getElementById('jewelries');
 

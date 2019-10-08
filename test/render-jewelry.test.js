@@ -1,6 +1,7 @@
 // IMPORT MODULES under test here:
 // import example from '../src/example.js';
-import renderJewelry from '../render-jewelry.js';
+import renderJewelry from '../Products/render-jewelry.js';
+import renderTableRow from '../Shopping Cart/render-table-row.js';
 
 const test = QUnit.test;
 
@@ -24,4 +25,30 @@ test('time to test a function', function(assert) {
     //Assert
     // Make assertions about what is expected valid result
     assert.equal(html, expected);
+});
+
+test('renders a table row', function(assert) {
+    //Arrange
+    // Set up your parameters and expectations
+
+    const blackTurquoiseRing = {
+        id: 'black-turquoise-ring',
+        name: 'Black Turquoise Ring',
+        image: 'blackturquoisering.jpg',
+        description: 'Handmade Black Turquoise Ring',
+        category: 'ring',
+        price: 50.00
+    };
+    const blackTurquoiseRingOrder = {
+        id: 'black-turquoise-ring',
+        quantity: 2
+    };
+    const expected = '<tr><td>Black Turquoise Ring</td><td>2</td><td>$50.00</td><td>$100.00</td></tr>';
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const jewelryElementTr = renderTableRow(blackTurquoiseRing, blackTurquoiseRingOrder);
+    const stringHtmlOfJewelryElement = jewelryElementTr.outerHTML;
+    //Assert
+    // Make assertions about what is expected valid result
+    assert.equal(stringHtmlOfJewelryElement, expected);
 });
