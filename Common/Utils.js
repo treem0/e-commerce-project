@@ -26,3 +26,11 @@ export const findItemById = (jewelries, id) => {
     }
     return null;
 };
+
+export const calcLineTotal = (quantity, price) => {
+    const amount = quantity * price;
+    return roundCurrency(amount);
+};
+function roundCurrency(amount) {
+    return Math.round(amount * 100) / 100;
+}
