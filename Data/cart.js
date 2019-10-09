@@ -1,5 +1,3 @@
-import jewelries from '../jewelry.js';
-
 const cart = [{
     id: 'turquoise-ring',
     quantity: 2

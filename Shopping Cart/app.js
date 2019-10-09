@@ -11,7 +11,7 @@ cart.forEach(jewelryOrder => {
         let jewelryTotal;
         
         if (jewelries.id === jewelryOrder.id) {
-            const row = renderTableRow(jewelries, jewelryOrder)
+            const row = renderTableRow(jewelries, jewelryOrder);
             tableElement.appendChild(row);
 
             jewelryTotal = jewelries.price * jewelryOrder.quantity;

@@ -1,9 +1,3 @@
-import jewelries from '../jewelry.js';
-import cart from '../Data/cart.js';
-import renderTableRow from '../Products/render-jewelry.js';
-
-const tableElement = document.querySelector('tbody');
-
 export const makePrettyCurrency = (number) => number.toLocaleString('en-US', {
     style: 'currency',
     currency: 'USD',
