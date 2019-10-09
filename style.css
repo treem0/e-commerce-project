@@ -36,12 +36,13 @@ nav {
     flex-direction: row;
     justify-content: space-around; 
     width: 1000px;
+    background-color: #EF8354;
 }
 .nav {
     text-decoration: underline;
 }
-.nav:hover{
-    color: #EF8354;
+a:hover{
+    color:white;
 }
 main {
     display: flex;
