@@ -27,10 +27,22 @@ export const findItemById = (jewelries, id) => {
     return null;
 };
 
-export const calcLineTotal = (quantity, price) => {
+export const calcLineItem = (quantity, price) => {
     const amount = quantity * price;
     return roundCurrency(amount);
 };
 function roundCurrency(amount) {
     return Math.round(amount * 100) / 100;
 }
+
+export const calcOrderItem = (cart, jewelries) => {
+    let orderTotal = 0;
+
+    for (let i = 0; i < cart.length; i++) {
+        const lineItem = cart[i];
+        const jewelry = findItemById(jewelries, lineItem.id);
+        const lineTotal = calcLineItem(lineItem.quantity, jewelry.price);
+        orderTotal += lineTotal;
+    }
+    return roundCurrency(orderTotal);
+};

@@ -2,8 +2,9 @@
 // import example from '../src/example.js';
 import renderJewelry from '../Products/render-jewelry.js';
 import renderTableRow from '../Shopping Cart/render-table-row.js';
-import { findItemById, calcLineTotal } from '../Common/Utils.js';
+import { findItemById, calcLineItem, calcOrderItem } from '../Common/Utils.js';
 import jewelries from '../jewelry.js';
+import cart from '../Data/cart.js';
 
 const test = QUnit.test;
 
@@ -87,8 +88,19 @@ test('calculates line total', function(assert) {
     const expected = 6.06;
     //Act 
     // Call the function you're testing and set the result to a const
-    const total = calcLineTotal(quantity, price);
+    const total = calcLineItem(quantity, price);
     //Assert
     // Make assertions about what is expected valid result
     assert.deepEqual(total, expected);
+});
+test('calculates order total', function(assert) {
+    //Arrange
+    // Set up your parameters and expectations
+    const expected = 845;
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const orderTotal = calcOrderItem(cart, jewelries);
+    //Assert
+    // Make assertions about what is expected valid result
+    assert.deepEqual(orderTotal, expected);
 });
