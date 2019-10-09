@@ -3,6 +3,7 @@
 import renderJewelry from '../Products/render-jewelry.js';
 import renderTableRow from '../Shopping Cart/render-table-row.js';
 import { findItemById } from '../Common/Utils.js';
+import jewelries from '../jewelry.js';
 
 const test = QUnit.test;
 
@@ -56,25 +57,25 @@ test('renders a table row', function(assert) {
 test('take an array and returns first item with ID', function(assert) {
     //Arrange
     // Set up your parameters and expectations
-
-    const blackTurquoiseRing = {
-        id: 'black-turquoise-ring',
-        name: 'Black Turquoise Ring',
-        image: 'blackturquoisering.jpg',
-        description: 'Handmade Black Turquoise Ring',
-        category: 'ring',
-        price: 50.00
-    };
-    const blackTurquoiseRingOrder = {
-        id: 'black-turquoise-ring',
-        quantity: 2
-    };
-    const expected = '<tr><td>Black Turquoise Ring</td><td>2</td><td>$50.00</td><td>$100.00</td></tr>';
+    const id = 'black-turquoise-ring';
+    const expected = 'Black Turquoise Ring';
     //Act 
     // Call the function you're testing and set the result to a const
-    const jewelryElementTr = renderTableRow(blackTurquoiseRing, blackTurquoiseRingOrder);
-    const stringHtmlOfJewelryElement = jewelryElementTr.outerHTML;
+    const foundJewelry = findItemById(jewelries, id);
     //Assert
     // Make assertions about what is expected valid result
-    assert.equal(stringHtmlOfJewelryElement, expected);
+    assert.ok(foundJewelry);
+    assert.deepEqual(foundJewelry.name, expected);
+});
+test('find product by id returns null if not found', function(assert) {
+    //Arrange
+    // Set up your parameters and expectations
+    const id = 'not found';
+    const expected = null;
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const foundJewelry = findItemById(jewelries, id);
+    //Assert
+    // Make assertions about what is expected valid result
+    assert.deepEqual(foundJewelry, expected);
 });
