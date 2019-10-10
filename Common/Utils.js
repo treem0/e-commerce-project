@@ -3,14 +3,6 @@ export const makePrettyCurrency = (number) => number.toLocaleString('en-US', {
     currency: 'USD',
 });
 
-//const totalJewelryPrice = (jewelries, quantity) => jewelries.price * quantity;
-
-
-//export const totalCartTotal = (jewelries, cart) => {
-    
-//};
-
-
 export const findItemById = (jewelries, id) => {
     for (let i = 0; i < jewelries.length; i++) {
         const lineItem = jewelries[i];
