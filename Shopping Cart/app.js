@@ -41,14 +41,16 @@ const buildTable = (cart, jewelries) => {
     addRows(cart, jewelries);
 };
 
-const javascriptReadablecart = JSON.parse(localStorage.getItem('cart'));
 
-buildTable(javascriptReadablecart, jewelries);
+const localStorageCart = localStorage.getItem('cart');
+const parsedCartActualData = JSON.parse(localStorageCart);
 
-for (let i = 0; i < jewelries.length; i++) {
-    if (jewelries[i].id === jewelryOrder.id) {
-        const row = renderTableRow(jewelries[i], jewelryOrder);
+buildTable(parsedCartActualData, jewelries);
 
-        tableElement.appendChild(row);
-    }
-}
+// for (let i = 0; i < jewelries.length; i++) {
+//     if (jewelries[i].id === jewelryOrder.id) {
+//         const row = renderTableRow(jewelries[i], jewelryOrder);
+
+//         tableElement.appendChild(row);
+//     }
+// }
