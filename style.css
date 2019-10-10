@@ -44,20 +44,8 @@ nav {
 a:hover{
     color:white;
 }
-.shopping-cart {
+main {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    font-family: 'Sree Krushnadevaraya', serif;
-}
-table, td {
-    width: 700px;
-    border: solid 2px #2D3142;
-    padding: 10px;
-    margin: 10px;
-    background-color: #EF8354;
-    border-collapse: collapse;
-}
-td {
-    text-align: center; 
+    justify-self: center;
 }

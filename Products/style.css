@@ -23,17 +23,21 @@ nav {
     flex-direction: row;
     justify-content: space-around; 
     width: 1000px;
+    background-color: #EF8354;
 }
 .nav {
     text-decoration: underline;
 }
-.nav:hover{
-    color: #EF8354;
+a:hover{
+    color:white;
 }
 main {
     display: flex;
+    width: 1400px;
     flex-direction: column;
     justify-self: center;
+    padding: 50px;
+    margin: 5px;
 }
 img {
     width: 150px;
