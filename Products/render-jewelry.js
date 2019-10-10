@@ -1,3 +1,7 @@
+import { initializeEmtpyCart, getCart, setCart } from '../Products/app.js';
+import { findItemById } from '../Common/Utils.js';
+import jewelries from '../jewelry.js';
+
 function renderJewelry(jewelry) {
     const li = document.createElement('li');
     li.name = jewelry.name;
@@ -20,12 +24,23 @@ function renderJewelry(jewelry) {
     const button = document.createElement('button');
     button.textContent = 'Add';
     button.value = jewelry.id;
+    button.addEventListener('click', () => {
+        let currentCartInLocalStorage = getCart();
+        if (!currentCartInLocalStorage) {
+            initializeEmtpyCart();
+            currentCartInLocalStorage(getCart);
+        }
+        let jewelryToIncrement = findItemById(jewelries.id, currentCartInLocalStorage);
+        jewelryToIncrement = jewelryToIncrement.quantity ++;
+        setCart(jewelryToIncrement);
+    });
+
+
     p.appendChild(button);
 
     li.appendChild(p);
     
     return li;
 }
-
 
 export default renderJewelry;

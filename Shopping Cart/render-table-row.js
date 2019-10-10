@@ -7,7 +7,6 @@ const makeTd = (content) => {
     return tdElement;
 };
 
-
 export default (jewelry, order) => {
     const tableRow = document.createElement('tr');
 
