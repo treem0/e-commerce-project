@@ -45,4 +45,4 @@ export const setCart = (currentCartInLocalStorage) => {
     localStorage.setItem('cart', serializedNewCart);
 };
 
-renderTableRow(jewelries, jewelryOrder);
+renderTableRow(jewelries, getCart);

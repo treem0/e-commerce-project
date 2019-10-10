@@ -25,13 +25,13 @@ function renderJewelry(jewelry) {
     button.textContent = 'Add';
     button.value = jewelry.id;
     button.addEventListener('click', () => {
-        let currentCartInLocalStorage = getCart();
+        let currentCartInLocalStorage = getCart;
         if (!currentCartInLocalStorage) {
             initializeEmtpyCart();
             currentCartInLocalStorage(getCart);
         }
         let jewelryToIncrement = findItemById(jewelries.id, currentCartInLocalStorage);
-        jewelryToIncrement = jewelryToIncrement.quantity ++;
+        jewelryToIncrement = getCart.quantity ++;
         setCart(jewelryToIncrement);
     });
 
