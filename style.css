@@ -33,12 +33,9 @@ header{
     background-color: blanchedalmond;
     margin-top: 20px;
     padding: 20px;
-    width: 500px;
 }
 main {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 20% 80%;
+
 }
 img {
     border-radius: 10px;
