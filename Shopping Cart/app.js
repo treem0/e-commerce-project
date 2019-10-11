@@ -1,8 +1,11 @@
 import renderTableRow from './render-table-row.js';
 import jewelries from '../jewelry.js';
 import { makePrettyCurrency, findItemById } from '../Common/Utils.js';
+import { getCart, setCart, initializeEmtpyCart } from '../Products/app.js';
 
+const currentCartInLocalStorage = getCart();
 const tableElement = document.querySelector('tbody');
+//Need to write a loop that forEach(currentCartInLocalStorage) assigns thisOrder to a const and jewelry.id to a const, and renderTableRow with those two conts as the arguments
 
 const getLineTotal = (order, item) => item.price * order.quantity;
 
@@ -42,15 +45,9 @@ const buildTable = (cart, jewelries) => {
 };
 
 
-const localStorageCart = localStorage.getItem('cart');
-const parsedCartActualData = JSON.parse(localStorageCart);
 
 buildTable(parsedCartActualData, jewelries);
 
-// for (let i = 0; i < jewelries.length; i++) {
-//     if (jewelries[i].id === jewelryOrder.id) {
-//         const row = renderTableRow(jewelries[i], jewelryOrder);
+//Should be renderTableRow(thisJewelry, thisCartItem)
+renderTableRow(jewelries, getCart());
 
-//         tableElement.appendChild(row);
-//     }
-// }

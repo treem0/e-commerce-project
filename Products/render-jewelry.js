@@ -1,4 +1,4 @@
-import { initializeEmtpyCart, getCart, setCart } from '../Products/app.js';
+import { initializeEmtpyCart, getCart, setCart, incrementById } from '../Products/app.js';
 import { findItemById } from '../Common/Utils.js';
 import jewelries from '../jewelry.js';
 
@@ -25,14 +25,14 @@ function renderJewelry(jewelry) {
     button.textContent = 'Add';
     button.value = jewelry.id;
     button.addEventListener('click', () => {
-        let currentCartInLocalStorage = getCart;
+        let currentCartInLocalStorage = getCart();
         if (!currentCartInLocalStorage) {
             initializeEmtpyCart();
-            currentCartInLocalStorage(getCart);
+            currentCartInLocalStorage(getCart());
         }
-        let jewelryToIncrement = findItemById(jewelries.id, currentCartInLocalStorage);
-        jewelryToIncrement = getCart.quantity ++;
-        setCart(jewelryToIncrement);
+        incrementById(button.value, currentCartInLocalStorage);
+        console.log(currentCartInLocalStorage);
+        setCart(currentCartInLocalStorage);
     });
 
 

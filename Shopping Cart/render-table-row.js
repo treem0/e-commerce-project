@@ -7,15 +7,15 @@ const makeTd = (content) => {
     return tdElement;
 };
 
-export default (jewelry, order) => {
+export default (jewelry, thisOrder) => {
     const tableRow = document.createElement('tr');
 
-    const totalPrice = order.quantity * jewelry.price;
+    const totalPrice = thisOrder.quantity * jewelry.price;
     const prettyPrice = makePrettyCurrency(jewelry.price);
     const prettyTotal = makePrettyCurrency(totalPrice);
 
     const columnOne = makeTd(jewelry.name);
-    const columnTwo = makeTd(order.quantity);
+    const columnTwo = makeTd(thisOrder.quantity);
     const columnThree = makeTd(prettyPrice);
     const columnFour = makeTd(prettyTotal);
 

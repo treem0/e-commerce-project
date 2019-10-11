@@ -14,7 +14,7 @@ export const incrementById = (id, cart) => {
     let thereIsAMatch = false;
 
     cart.forEach(order => {
-        if (order.id === order.id) {
+        if (order.id === id) {
             order.quantity ++;
             thereIsAMatch = true;
         }
@@ -45,4 +45,3 @@ export const setCart = (currentCartInLocalStorage) => {
     localStorage.setItem('cart', serializedNewCart);
 };
 
-renderTableRow(jewelries, getCart);
