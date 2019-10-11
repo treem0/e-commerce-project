@@ -1,4 +1,4 @@
-* { background-color: rgba(255,0,0,.2); }
+/* * { background-color: rgba(255,0,0,.2); }
 * * { background-color: rgba(0,255,0,.2); }
 * * * { background-color: rgba(0,0,255,.2); }
 * * * * { background-color: rgba(255,0,255,.2); }
@@ -6,7 +6,7 @@
 * * * * * * { background-color: rgba(255,255,0,.2); }
 * * * * * * * { background-color: rgba(255,0,0,.2); }
 * * * * * * * * { background-color: rgba(0,255,0,.2); }
-* * * * * * * * * { background-color: rgba(0,0,255,.2); }
+* * * * * * * * * { background-color: rgba(0,0,255,.2); } */
 html, body {
     height: 100%;
     margin: 0;
@@ -16,6 +16,7 @@ nav {
     background-color: teal;
     height: 50px;
     justify-content: space-around;
+    margin-bottom: 20px;
 }
 .home-ul {
     display: flex;
@@ -36,21 +37,35 @@ li {
     width: auto;
     margin: 10px;
 }
+a:hover{
+    color:teal;
+}
 header{
     display: flex;
     justify-content: center;
-    background-color: blanchedalmond;
-    margin-top: 20px;
+    margin: auto;
     padding: 20px;
+    width: 60%;
+    font-family: 'Krona One', sans-serif;
+    background-color: blanchedalmond;
 }
 main {
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
-width: 40%;
+width: 60%;
 margin: auto;
 padding: 10px;
+height: auto;
+}
+p {
+    font-family: 'Sree Krushnadevaraya', serif;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 25px;
 }
 img {
     border-radius: 20px;
+    margin: 5px;
+    box-shadow: 5px 7px #2D3142;
 }
