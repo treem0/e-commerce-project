@@ -1,29 +1,34 @@
-import { makePrettyCurrency } from '../Common/Utils.js';
+import { makePrettyCurrency, calcLineItem } from '../Common/Utils.js';
 
-const makeTd = (content) => {
-    const tdElement = document.createElement('td');
-    tdElement.textContent = content;
-
-    return tdElement;
-};
-
-export default (jewelry, thisOrder) => {
+function renderTableRow(lineItem, jewelries) {
     const tableRow = document.createElement('tr');
 
-    const totalPrice = thisOrder.quantity * jewelry.price;
-    const prettyPrice = makePrettyCurrency(jewelry.price);
-    const prettyTotal = makePrettyCurrency(totalPrice);
+    const nameCell = document.createElement('td');
+    nameCell.className = 'align-left';
+    nameCell.textContent = jewelries.name;
+    tableRow.appendChild(nameCell);
 
-    const columnOne = makeTd(jewelry.name);
-    const columnTwo = makeTd(thisOrder.quantity);
-    const columnThree = makeTd(prettyPrice);
-    const columnFour = makeTd(prettyTotal);
+    const quantityCell = document.createElement('td');
+    quantityCell.textContent = lineItem.quantity;
+    tableRow.appendChild(quantityCell);
 
+    const priceCell = document.createElement('td');
+    priceCell.textContent = '$' + jewelries.price;
+    tableRow.appendChild(priceCell);
 
-    tableRow.appendChild(columnOne);
-    tableRow.appendChild(columnTwo);
-    tableRow.appendChild(columnThree);
-    tableRow.appendChild(columnFour);
+    const totalCell = document.createElement('td');
+    totalCell.className = 'line-item-total';
+    const total = calcLineItem(lineItem.quantity, jewelries.price);
+    totalCell.textContent = makePrettyCurrency(total);
+    tableRow.appendChild(totalCell);
 
     return tableRow;
-};
+}
+export default renderTableRow;
+
+
+
+
+
+
+

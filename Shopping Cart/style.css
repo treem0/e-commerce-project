@@ -1,12 +1,16 @@
+Html {
+	Height: 100%;
+    Margin: 0;
+    background-color: rgba(8, 7, 7, 0.151);
+}
+
 header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #2D3142;
-    width: 1400px;
-    max-width: 1600px;
-    margin: 50px;
+    width: 100%;
 }
 h1 {
     font-family: 'Krona One', sans-serif;
@@ -35,7 +39,7 @@ nav {
     border: solid;
     flex-direction: row;
     justify-content: space-around; 
-    width: 1000px;
+    width: 100%;
     background-color: #EF8354;
 }
 .nav {
@@ -60,4 +64,16 @@ table, td {
 }
 td {
     text-align: center; 
+}
+button {
+    color: whitesmoke;
+    background-color: #2D3142;
+}
+button:hover {
+    background-color: #EF8354
+}
+button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
 }

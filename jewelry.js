@@ -34,11 +34,31 @@ const turquoiseNecklace = {
     price: 45.00
 };
 
+const yellowButterNecklace = {
+    id: 'yellow-butter-necklace',
+    name: 'Yellow Butter Stone Necklace',
+    image: 'yellowbutternecklace.jpg',
+    description: 'Handmade Yellow Stone Better Necklace',
+    category: 'necklace',
+    price: 45.00
+};
+
+const turquoiseRing2 = {
+    id: 'turquoise-ring-2',
+    name: 'Turquoise Ring 2',
+    image: 'turquoisering2.jpg',
+    description: 'Handmade Turquoise Necklace',
+    category: 'ring',
+    price: 50.00
+};
+
 const jewelries = [
     turquoiseRing,
     blackTurquoiseRing,
     turquoiseBracelet,
-    turquoiseNecklace
+    turquoiseNecklace,
+    yellowButterNecklace,
+    turquoiseRing2
 ];
 
 export default jewelries;

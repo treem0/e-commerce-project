@@ -1,4 +1,3 @@
-import { initializeEmtpyCart, getCart, setCart, incrementById } from '../Products/app.js';
 import { findItemById } from '../Common/Utils.js';
 import jewelries from '../jewelry.js';
 
@@ -21,26 +20,41 @@ function renderJewelry(jewelry) {
     const usd = 'Price: $' + jewelry.price.toFixed(2);
     p.textContent = usd;
 
+    const itemQuantity = document.createElement('P');
+
     const button = document.createElement('button');
     button.textContent = 'Add';
     button.value = jewelry.id;
     button.addEventListener('click', () => {
-        let currentCartInLocalStorage = getCart();
-        if (!currentCartInLocalStorage) {
-            initializeEmtpyCart();
-            currentCartInLocalStorage(getCart());
+        
+        let json = localStorage.getItem('CART');
+        let cart;
+        if (json) {
+            cart = JSON.parse(json);
+        } else {
+            cart = [];
         }
-        incrementById(button.value, currentCartInLocalStorage);
-        console.log(currentCartInLocalStorage);
-        setCart(currentCartInLocalStorage);
-    });
 
+        let lineItem = findItemById(cart, jewelry.id)
+        itemQuantity.textContent = 'Qty: ' + lineItem.quantity;
+        
+        
+        if (!lineItem) {
+            lineItem = {
+                id: jewelry.id,
+                quantity: 1
+            }
+            cart.push(lineItem);
+        } else {
+            lineItem.quantity++;
+        }
+        json = JSON.stringify(cart);
+        localStorage.setItem('CART', json);
 
-    p.appendChild(button);
-
-    li.appendChild(p);
-    
-    return li;
-}
-
+     });    
+        p.appendChild(button);
+        li.appendChild(p);
+        p.appendChild(itemQuantity);
+        return li;
+    }
 export default renderJewelry;
