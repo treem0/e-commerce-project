@@ -46,7 +46,7 @@ test('renders a table row', function(assert) {
         id: 'black-turquoise-ring',
         quantity: 2
     };
-    const expected = '<tr><td class=\"align-left\"></td><td></td><td>$undefined</td><td class=\"line-item-total\">$NaN</td></tr>';
+    const expected = '<tr><td class="align-left"></td><td></td><td>$undefined</td><td class="line-item-total">$NaN</td></tr>';
     //Act 
     // Call the function you're testing and set the result to a const
     const jewelryElementTr = renderTableRow(blackTurquoiseRing, blackTurquoiseRingOrder);

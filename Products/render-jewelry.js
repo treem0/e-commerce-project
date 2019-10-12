@@ -41,14 +41,14 @@ function renderJewelry(jewelry) {
             lineItem = {
                 id: jewelry.id,
                 quantity: 1
-            }
+            };
             cart.push(lineItem);
         } else {
             lineItem.quantity++;
         }
-    json = JSON.stringify(cart);
-    localStorage.setItem('CART', json);
-    itemQuantity.textContent = 'Qty: ' + lineItem.quantity;
+        json = JSON.stringify(cart);
+        localStorage.setItem('CART', json);
+        itemQuantity.textContent = 'Qty: ' + lineItem.quantity;
 
     });    
     p.appendChild(button);
