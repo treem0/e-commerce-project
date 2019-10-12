@@ -36,7 +36,6 @@ function renderJewelry(jewelry) {
         }
 
         let lineItem = findItemById(cart, jewelry.id)
-        itemQuantity.textContent = 'Qty: ' + lineItem.quantity;
         
         
         if (!lineItem) {
@@ -50,6 +49,7 @@ function renderJewelry(jewelry) {
         }
         json = JSON.stringify(cart);
         localStorage.setItem('CART', json);
+        itemQuantity.textContent = 'Qty: ' + lineItem.quantity;
 
      });    
         p.appendChild(button);

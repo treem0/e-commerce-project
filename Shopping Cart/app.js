@@ -6,13 +6,13 @@ const tableElement = document.querySelector('tbody');
 const placeOrderButton = document.getElementById('place-order-button');
 const orderTotalCell = document.getElementById('order-total-cell');
 
-// const json = localStorage.getItem('CART');
-// let cart;
-// if (json) {
-//     cart = JSON.parse(json);
-// } else {
-//     cart = [];
-// }
+const json = localStorage.getItem('CART');
+let cart;
+if (json) {
+    cart = JSON.parse(json);
+} else {
+    cart = [];
+}
 
 for (let i = 0; i < cart.length; i++) {
     const lineItem = cart[i];
