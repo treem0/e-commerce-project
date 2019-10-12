@@ -1,5 +1,4 @@
 import { findItemById } from '../Common/Utils.js';
-import jewelries from '../jewelry.js';
 
 function renderJewelry(jewelry) {
     const li = document.createElement('li');
@@ -35,7 +34,7 @@ function renderJewelry(jewelry) {
             cart = [];
         }
 
-        let lineItem = findItemById(cart, jewelry.id)
+        let lineItem = findItemById(cart, jewelry.id);
         
         
         if (!lineItem) {
@@ -47,14 +46,14 @@ function renderJewelry(jewelry) {
         } else {
             lineItem.quantity++;
         }
-        json = JSON.stringify(cart);
-        localStorage.setItem('CART', json);
-        itemQuantity.textContent = 'Qty: ' + lineItem.quantity;
+    json = JSON.stringify(cart);
+    localStorage.setItem('CART', json);
+    itemQuantity.textContent = 'Qty: ' + lineItem.quantity;
 
-     });    
-        p.appendChild(button);
-        li.appendChild(p);
-        p.appendChild(itemQuantity);
-        return li;
-    }
+    });    
+    p.appendChild(button);
+    li.appendChild(p);
+    p.appendChild(itemQuantity);
+    return li;
+}
 export default renderJewelry;

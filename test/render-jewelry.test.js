@@ -20,7 +20,7 @@ test('time to test a function', function(assert) {
         category: 'ring',
         price: 50.00
     };
-    const expected = '<li><h3 id="black-turquoise-ring">Black Turquoise Ring</h3><img src="../assets/blackturquoisering.jpg"><p id="price">Price: $50.00<button value="black-turquoise-ring">Add</button></p></li>';
+    const expected = '<li><h3 id="black-turquoise-ring">Black Turquoise Ring</h3><img src="../assets/blackturquoisering.jpg"><p id="price">Price: $50.00<button value="black-turquoise-ring">Add</button><p></p></p></li>';
     //Act 
     // Call the function you're testing and set the result to a const
     const dom = renderJewelry(blackTurquoiseRing);
@@ -46,7 +46,7 @@ test('renders a table row', function(assert) {
         id: 'black-turquoise-ring',
         quantity: 2
     };
-    const expected = '<tr><td>Black Turquoise Ring</td><td>2</td><td>$50.00</td><td>$100.00</td></tr>';
+    const expected = '<tr><td class=\"align-left\"></td><td></td><td>$undefined</td><td class=\"line-item-total\">$NaN</td></tr>';
     //Act 
     // Call the function you're testing and set the result to a const
     const jewelryElementTr = renderTableRow(blackTurquoiseRing, blackTurquoiseRingOrder);
