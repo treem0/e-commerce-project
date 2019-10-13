@@ -12,22 +12,20 @@ header {
     color: #2D3142;
     width: 100%;
 }
-hr {
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-  }
 h1 {
-    font-family: 'Krona One', sans-serif;
+    font-family: 'Rock Salt', cursive;
+    font-size: 80px;
+    height: 80px;
+    margin-top: 6px;
 }
 h2 {
-    font-family: 'Sree Krushnadevaraya', serif;
+    font-family: 'Waiting for the Sunrise', cursive;
     width: 50%;
     align-items: center;
 }
 .hand-made-jewelry-shop {
-    display: flex;
-    margin-right: 40%;
+    margin-left: 60%;
+    color: rgb(18, 177, 163);
 }
 nav {
     display: flex;
@@ -35,13 +33,18 @@ nav {
     flex-direction: row;
     justify-content: space-around; 
     width: 100%;
-    background-color: #EF8354;
+    background-color: rgb(119, 117, 108);
+    font-family: 'Waiting for the Sunrise', cursive;
+}
+a {
+    color: whitesmoke;
+    font-size: 20px;
 }
 .nav {
     text-decoration: underline;
 }
 a:hover{
-    color:white;
+    color:rgb(18, 177, 163);
 }
 .products-title {
     display: flex;
@@ -81,7 +84,7 @@ li {
     align-content: center;
 }
 li:hover {
-    color: #EF8354;
+    color: rgb(18, 177, 163);
 }
 button {
     background-color: #2D3142;
@@ -91,7 +94,7 @@ button {
     margin: 5px;
 }
 button:hover {
-    background-color: #EF8354
+    color: rgb(18, 177, 163);
 }
 button:active {
     background-color: #3e8e41;
