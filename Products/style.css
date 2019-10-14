@@ -1,3 +1,8 @@
+Html {
+	Height: 100%;
+    Margin: 0;
+    background-color: rgba(8, 7, 7, 0.151);
+}
 
 header {
     display: flex;
@@ -5,39 +10,55 @@ header {
     justify-content: center;
     align-items: center;
     color: #2D3142;
-    width: 1400px;
-    max-width: 1600px;
-    margin: 50px;
+    width: 100%;
 }
 h1 {
-    font-family: 'Krona One', sans-serif;
+    font-family: 'Rock Salt', cursive;
+    font-size: 80px;
+    height: 80px;
+    margin-top: 6px;
 }
 h2 {
-    font-family: 'Sree Krushnadevaraya', serif;
-    width: 50%;
+    font-family: 'Waiting for the Sunrise', cursive;
+    width: 40%;
     align-items: center;
+}
+.hand-made-jewelry-shop {
+    margin-left: 60%;
+    color: rgb(18, 177, 163);
 }
 nav {
     display: flex;
-    border: solid;
     flex-direction: row;
     justify-content: space-around; 
-    width: 1000px;
-    background-color: #EF8354;
+    width: 100%;
+    background-color: rgb(119, 117, 108);
+    font-family: 'Waiting for the Sunrise', cursive;
+}
+a {
+    color: whitesmoke;
+    font-size: 20px;
 }
 .nav {
     text-decoration: underline;
 }
 a:hover{
-    color:white;
+    color:rgb(18, 177, 163);
+}
+.products-title {
+    display: flex;
+    width: auto;
+    justify-content: center;
+    margin-left: 2.5%;
 }
 main {
     display: flex;
-    width: 1400px;
+    width: 60%;
+    flex-wrap: wrap;
     flex-direction: column;
-    justify-self: center;
-    padding: 50px;
-    margin: 5px;
+    justify-content: center;
+    padding: 2%;
+    margin: 2% 20%;
 }
 img {
     width: 150px;
@@ -54,13 +75,15 @@ ul {
 li {
     border: solid;
     border-radius: 20px;
-    width: 250px;
+    width: 25%;
     padding: 15px;
+    overflow: hidden;
+    margin-bottom: 12px;
     box-shadow: 5px 10px #2D3142;
     align-content: center;
 }
 li:hover {
-    color: #EF8354;
+    color: rgb(18, 177, 163);
 }
 button {
     background-color: #2D3142;
@@ -70,5 +93,10 @@ button {
     margin: 5px;
 }
 button:hover {
-    color: #EF8354;
+    color: rgb(18, 177, 163);
+}
+button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
 }

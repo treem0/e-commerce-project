@@ -1,51 +1,74 @@
+Html {
+	Height: 100%;
+    Margin: 0;
+    background-color: rgba(8, 7, 7, 0.151);
+}
+
 header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #2D3142;
-    width: 1400px;
-    max-width: 1600px;
-    margin: 50px;
+    width: 100%;
 }
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
 h1 {
-    font-family: 'Krona One', sans-serif;
+    font-family: 'Rock Salt', cursive;
+    font-size: 80px;
+    height: 80px;
+    margin-top: 6px;
 }
 h2 {
-    font-family: 'Sree Krushnadevaraya', serif;
-    width: 50%;
+    font-family: 'Waiting for the Sunrise', cursive;
+    width: 40%;
     align-items: center;
+}
+.hand-made-jewelry-shop {
+    margin-left: 60%;
+    color: rgb(18, 177, 163);
 }
 main {
     display: flex;
+    width: 60%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    flex-direction: row;
-    justify-content: space-around;
+    padding: 2%;
+    margin: 2% 20%;
 }
 p {
-    font-family: 'Sree Krushnadevaraya', serif;
-    width: 500px;
-    align-items: center; 
+    font-family: 'Waiting for the Sunrise', cursive;
+    width: 55%;
+    align-items: center;
+    padding: 2% 25%; 
+    font-size: 20px;
 }
 img {
     width: 500px;
+    padding: 2% 5%;
 }
 nav {
     display: flex;
-    border: solid;
     flex-direction: row;
     justify-content: space-around; 
-    width: 1000px;
-    background-color: #EF8354;
+    width: 100%;
+    background-color: rgb(119, 117, 108);
+    font-family: 'Waiting for the Sunrise', cursive;
+}
+a {
+    color: whitesmoke;
+    font-size: 20px;
 }
 .nav {
     text-decoration: underline;
 }
 a:hover{
-    color:white;
+    color:rgb(18, 177, 163);
 }
-main {
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-}
+
