@@ -20,7 +20,7 @@ h1 {
 }
 h2 {
     font-family: 'Waiting for the Sunrise', cursive;
-    width: 50%;
+    width: 40%;
     align-items: center;
 }
 .hand-made-jewelry-shop {
@@ -43,7 +43,6 @@ img {
 }
 nav {
     display: flex;
-    border: solid;
     flex-direction: row;
     justify-content: space-around; 
     width: 100%;

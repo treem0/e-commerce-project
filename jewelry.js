@@ -25,13 +25,13 @@ const turquoiseBracelet = {
     price: 45.00
 };
 
-const turquoiseNecklace = {
-    id: 'turquoise-necklace',
-    name: 'Turquoise Necklace',
-    image: 'turquoisenecklace.jpg',
-    description: 'Handmade Turquoise Necklace',
+const turquoiseRing3 = {
+    id: 'turquoise-ring-3',
+    name: 'Turquoise Ring 3',
+    image: 'turquoisering3.jpg',
+    description: 'Handmade Turquoise Ring 3',
     category: 'necklace',
-    price: 45.00
+    price: 50.00
 };
 
 const yellowButterNecklace = {
@@ -47,18 +47,18 @@ const turquoiseRing2 = {
     id: 'turquoise-ring-2',
     name: 'Turquoise Ring 2',
     image: 'turquoisering2.jpg',
-    description: 'Handmade Turquoise Necklace',
+    description: 'Handmade Turquoise Ring 2',
     category: 'ring',
     price: 50.00
 };
 
 const jewelries = [
     turquoiseRing,
+    turquoiseRing2,
+    turquoiseRing3,
     blackTurquoiseRing,
     turquoiseBracelet,
-    turquoiseNecklace,
-    yellowButterNecklace,
-    turquoiseRing2
+    yellowButterNecklace
 ];
 
 export default jewelries;
