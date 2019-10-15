@@ -1,25 +1,36 @@
 import renderTableRow from './render-table-row.js';
 import jewelries from '../jewelry.js';
-import { makePrettyCurrency } from '../Common/Utils.js';
-import cart from '../Data/cart.js';
+import { makePrettyCurrency, findItemById, calcOrderItem } from '../Common/Utils.js';
 
 const tableElement = document.querySelector('tbody');
+const placeOrderButton = document.getElementById('place-order-button');
+const orderTotalCell = document.getElementById('order-total-cell');
 
-let cartTotal = 0;
-cart.forEach(jewelryOrder => {
-    jewelries.forEach(jewelries => {
-        let jewelryTotal;
-        
-        if (jewelries.id === jewelryOrder.id) {
-            const row = renderTableRow(jewelries, jewelryOrder);
-            tableElement.appendChild(row);
+const json = localStorage.getItem('CART');
+let cart;
+if (json) {
+    cart = JSON.parse(json);
+} else {
+    cart = [];
+}
 
-            jewelryTotal = jewelries.price * jewelryOrder.quantity;
+for (let i = 0; i < cart.length; i++) {
+    const lineItem = cart[i];
+    const jewelry = findItemById(jewelries, lineItem.id);
+    const dom = renderTableRow(lineItem, jewelry);
 
-            cartTotal = cartTotal + jewelryTotal;
-        }
+    tableElement.appendChild(dom);
+}
+
+const orderTotal = calcOrderItem(cart, jewelries);
+orderTotalCell.textContent = makePrettyCurrency(orderTotal);
+
+if (cart.length === 0) {
+    placeOrderButton.disabled = true;
+} else {
+    placeOrderButton.addEventListener('click', () => {
+        localStorage.removeItem('CART');
+        alert('Your order has been placed!' + JSON.stringify(cart, true, 2));
+        window.location = '../';
     });
-
-    const totalCell = document.getElementById('order-total-cell');
-    totalCell.textContent = makePrettyCurrency(cartTotal);
-});
+}

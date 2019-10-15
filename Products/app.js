@@ -8,3 +8,4 @@ for (let i = 0; i < jewelries.length; i++) {
     const dom = renderJewelry(jewelry);
     list.appendChild(dom);
 }
+
